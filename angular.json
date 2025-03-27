@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "defaultProject": "angular-a11y-advanced",
+  "projects": {
+    "angular-a11y-advanced": {
+      "projectType": "application",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "options": {
+            "outputPath": "dist/angular-a11y-advanced",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "assets": ["src/assets"],
+            "styles": [],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

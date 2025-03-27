@@ -1,0 +1,18 @@
+<h2>{{ contactTitle }}</h2>
+
+<form (ngSubmit)="submitForm()" #contactForm="ngForm">
+  <!-- Ошибка: нет label -->
+  <input name="name" [(ngModel)]="formData.name" placeholder="Ваше имя">
+
+  <!-- Ошибка: недостаточный контраст -->
+  <textarea name="message" [(ngModel)]="formData.message" style="color: #ccc;" placeholder="Сообщение"></textarea>
+
+  <button type="submit">Отправить</button>
+</form>
+
+<!-- Отображение данных после отправки -->
+<div *ngIf="submitted">
+  <h3>Данные из формы:</h3>
+  <p><strong>Имя:</strong> {{ formData.name }}</p>
+  <p><strong>Сообщение:</strong> {{ formData.message }}</p>
+</div>
