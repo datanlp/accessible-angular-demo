@@ -5,22 +5,34 @@
   "projects": {
     "angular-a11y-advanced": {
       "projectType": "application",
+      "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "architect": {
-        "build": {
-          "options": {
-            "outputPath": "dist/angular-a11y-advanced",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "assets": ["src/assets"],
-            "styles": [],
-            "scripts": []
-          }
-        }
-      }
+ "architect": {
+  "build": {
+    "builder": "@angular-devkit/build-angular:browser",
+    "options": {
+      "outputPath": "dist/angular-a11y-advanced",
+      "index": "src/index.html",
+      "main": "src/main.ts",
+      "polyfills": "src/polyfills.ts",
+      "tsConfig": "tsconfig.app.json",
+      "assets": ["src/assets"],
+      "styles": [],
+      "scripts": []
     }
+  },
+  "serve": {
+    "builder": "@angular-devkit/build-angular:dev-server",
+    "options": {
+      "browserTarget": "angular-a11y-advanced:build"
+    }
+  }
+}
+
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
