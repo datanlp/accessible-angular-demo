@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "build": "ng build",
+    "a11y-bot": "node ../a11y-ai-review-bot/ai-a11y-bot.js"
   },
   "dependencies": {
     "@angular/animations": "^16.0.0",
@@ -22,6 +25,9 @@
     "@angular-devkit/build-angular": "^16.0.0",
     "@angular/cli": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
+    "axe-core": "^4.10.3",
+    "cypress": "^14.2.0",
+    "cypress-axe": "^1.6.0",
     "typescript": "~5.0.0"
   }
 }

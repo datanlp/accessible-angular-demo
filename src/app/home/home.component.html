@@ -1,8 +1,8 @@
-<h1>{{ homeTitle }}</h1>
-<p [innerHTML]="homeText"></p>
+<h1>{{ title }}</h1>
+<p>{{ text }}</p>
 
-<!-- Ошибка: alt отсутствует -->
+<!-- Ошибка: нет alt -->
 <img src="assets/banner.jpg">
 
-<!-- Ошибка: div вместо button -->
-<div (click)="scrollDown()">Узнать больше</div>
+<!-- Ошибка: div вместо кнопки -->
+<div (click)="scrollToBottom()">Read more</div>

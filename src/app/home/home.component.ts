@@ -6,15 +6,15 @@ import texts from '../../assets/texts.json';
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  homeTitle = '';
-  homeText = '';
+  title = '';
+  text = '';
 
   ngOnInit() {
-    this.homeTitle = texts.home.title;
-    this.homeText = texts.home.text;
+    this.title = texts.home.title;
+    this.text = texts.home.text;
   }
 
-  scrollDown() {
+  scrollToBottom() {
     window.scrollTo({ top: 1000, behavior: 'smooth' });
   }
 }
